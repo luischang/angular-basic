@@ -1,24 +1,26 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+ crossorigin="anonymous">
+
 
 <h2> {{name}} </h2>
 <p>
-  Esta es una página SPA
+	Esta es una página SPA
 </p>
 
 <h1>Suma de números</h1>
-    <p>Num1: <input type="number" [(ngModel)]="num1"></p>
+<p>Num1: <input type="number" [(ngModel)]="num1"></p>
     <p>Num2: <input type="number" [(ngModel)]="num2"></p>
  <p>La suma es: {{ num1   + num2  }}</p>
 
 <h2>Listado de productos </h2>
 
-
-
-  <table> 
+  <table class="table table-dark"> 
     <thead> 
       <tr>
       <th> Nombre </th>
       <th> Precio </th>
       <th> Descripción </th>
+      <th> </th>
       <th> </th>
     </thead>    
     <tbody>
@@ -26,11 +28,11 @@
             <td>{{ product.nombre }} </td>
             <td> {{ product.precio }}</td>
             <td>{{ product.descripcion }} </td>
+            <td> <button class="btn btn-info" (click)="compartir()">Compartir</button> </td>
+            <td> <p *ngIf="product.precio > 700">
+                  <button class="btn btn-success">Notifícame</button>
+                </p>
+           </td>
             </tr>
    </tbody>
   </table>
-
-  
-
-
- 

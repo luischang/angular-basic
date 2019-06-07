@@ -10,6 +10,13 @@ import { productos } from '../app/productos';
 export class AppComponent  {
   name = 'Desarrollo de aplicaciones web';
   productos = productos;
+
+  compartir(){
+    window.alert("Producto compartido");
+  }
+
 }
+
+
 
 
