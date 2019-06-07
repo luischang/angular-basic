@@ -1,7 +1,15 @@
-import { ProductoClass } from '../app/producto-class';
+export class Producto {
+  create(Constructor: typeof Producto) {
+        Constructor.prototype; // works
+    }
+  nombre: string;
+  precio: number;  
+  descripcion: string;
+}
 
-export const Productos: ProductoClass[] = [
-//export const Productos = [
+
+/*
+export const Productos = [
   {
     nombre: 'Huawei P30 PRO',
     precio: 799,
@@ -19,3 +27,4 @@ export const Productos: ProductoClass[] = [
   }
 ];
 
+*/

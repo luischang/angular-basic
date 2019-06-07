@@ -22,17 +22,27 @@
       <th> Descripción </th>
       <th> </th>
       <th> </th>
+      <th> </th>
     </thead>    
     <tbody>
-            <tr *ngFor="let product of productos">
+            <tr *ngFor="let product of listaProductos">
             <td>{{ product.nombre }} </td>
             <td> {{ product.precio }}</td>
             <td>{{ product.descripcion }} </td>
+            <td> <button class="btn btn-success" [class.selected]="product === productoSeleccionado" (click)="verDetalle(product)">Ver detalle </button> </td>
             <td> <button class="btn btn-info" (click)="compartir()">Compartir</button> </td>
             <td> <p *ngIf="product.precio > 700">
-                  <button class="btn btn-success">Notifícame</button>
+                  <button class="btn btn-warning">Notifícame</button>
                 </p>
            </td>
+           
             </tr>
    </tbody>
   </table>
+
+  <app-producto-detalle [prod]="productoSeleccionado"></app-producto-detalle>
+
+
+  
+ 
+  

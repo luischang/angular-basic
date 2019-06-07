@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
-import { productos } from '../app/productos';
+import { Productos } from '../app/productos';
+import { ProductoClass } from '../app/producto-class';
 
 @Component({
   selector: 'my-app',
@@ -9,11 +10,23 @@ import { productos } from '../app/productos';
 })
 export class AppComponent  {
   name = 'Desarrollo de aplicaciones web';
-  productos = productos;
-
+  listaProductos = Productos;  
+  productoSeleccionado = ProductoClass;
+  //Productos = ProductoClass;
   compartir(){
     window.alert("Producto compartido");
   }
+
+  //verDetalle(){
+   // window.alert("Producto compartido");
+  //}
+
+  verDetalle(prod: ProductoClass): void {
+   this.productoSeleccionado = prod;
+  }
+
+  //verDetalle(producto: producto) { this.productoSeleccionado = producto; }
+
 
 }
 
