@@ -11,11 +11,26 @@
 
 <h2>Listado de productos </h2>
 
-<div *ngFor="let product of productos">
 
-  <h3>
-      {{ product.nombre }}
-  </h3>
 
-</div>
+  <table> 
+    <thead> 
+      <tr>
+      <th> Nombre </th>
+      <th> Precio </th>
+      <th> Descripción </th>
+      <th> </th>
+    </thead>    
+    <tbody>
+            <tr *ngFor="let product of productos">
+            <td>{{ product.nombre }} </td>
+            <td> {{ product.precio }}</td>
+            <td>{{ product.descripcion }} </td>
+            </tr>
+   </tbody>
+  </table>
+
+  
+
+
  
