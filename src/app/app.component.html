@@ -1,0 +1,21 @@
+
+<h2> {{name}} </h2>
+<p>
+  Esta es una página SPA
+</p>
+
+<h1>Suma de números</h1>
+    <p>Num1: <input type="number" [(ngModel)]="num1"></p>
+    <p>Num2: <input type="number" [(ngModel)]="num2"></p>
+ <p>La suma es: {{ num1   + num2  }}</p>
+
+<h2>Listado de productos </h2>
+
+<div *ngFor="let product of productos">
+
+  <h3>
+      {{ product.nombre }}
+  </h3>
+
+</div>
+ 
