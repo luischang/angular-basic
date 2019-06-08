@@ -3,8 +3,9 @@ Ver detalle del producto
 </p>
 
 <div *ngIf="prod">
-
+<marquee> 
   <h3>{{prod.descripcion | uppercase}}</h3> 
   <h3>{{prod.precio}}</h3> 
-
+  <h4> {{prod.fabricante}} </h4>
+</marquee>
 </div>
